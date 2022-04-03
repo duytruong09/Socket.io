@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Trang Chu</title>
-</head>
+    <title>Socket.io</title>
 
-<body>
-    <div>Day la trang chu</div>
+    <style>
+        #do,
+        #xanh,
+        #vang {
+            width: 300px;
+            height: 70px;
+        }
+
+        #do {
+            background-color: red;
+        }
+
+        #xanh {
+            background-color: green;
+        }
+
+        #vang {
+            background-color: yellow;
+        }
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="socket.io/socket.io.js"></script>
+</head>
+
+<body bgColor="pink">
+    <!-- <input type="button" id="send" value="Send"> -->
+    <div id="do"></div>
+    <div id="xanh"></div>
+    <div id="vang"></div>
+
     <script>
         // call with server socket
         const socket = io('http://localhost:3000')
+        socket.on('Server-send-data', (data) => {
+            $('body').attr('bgColor', data)
+        })
 
         $(document).ready(() => {
-            alert('Hello')
+            $('#do').click(() => {
+                socket.emit("Client-send-data", "red")
+            })
+
+            $('#xanh').click(() => {
+                socket.emit("Client-send-data", "green")
+            })
+
+            $('#vang').click(() => {
+                socket.emit("Client-send-data", "yellow")
+            })
         })
     </script>
 </body>
