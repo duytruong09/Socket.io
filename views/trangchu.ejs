@@ -2,59 +2,42 @@
 
 <head>
     <title>Socket.io</title>
-
-    <style>
-        #do,
-        #xanh,
-        #vang {
-            width: 300px;
-            height: 70px;
-        }
-
-        #do {
-            background-color: red;
-        }
-
-        #xanh {
-            background-color: green;
-        }
-
-        #vang {
-            background-color: yellow;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="socket.io/socket.io.js"></script>
+    <script src="exec.js"></script>
 </head>
 
-<body bgColor="pink">
-    <!-- <input type="button" id="send" value="Send"> -->
-    <div id="do"></div>
-    <div id="xanh"></div>
-    <div id="vang"></div>
+<body>
+    <div class="container">
+        <div class="loginForm">
+            <h3>WHAT IS YOUR NAME ?</h3>
+            <input type="text" id="txtLogin">
+            <input type="button" id="btnRegister" value="Register">
+        </div>
 
-    <script>
-        // call with server socket
-        const socket = io('http://localhost:3000')
-        socket.on('Server-send-data', (data) => {
-            $('body').attr('bgColor', data)
-        })
-
-        $(document).ready(() => {
-            $('#do').click(() => {
-                socket.emit("Client-send-data", "red")
-            })
-
-            $('#xanh').click(() => {
-                socket.emit("Client-send-data", "green")
-            })
-
-            $('#vang').click(() => {
-                socket.emit("Client-send-data", "yellow")
-            })
-        })
-    </script>
+        <div class="chatForm">
+            <h1>CHAT ONLINE</h1>
+            <div id="left">
+                <div id="boxTitle">User Online</div>
+                <div id="boxContent"></div>
+            </div>
+            <div id="right">
+                <div id="sayHi">
+                    Hello <span id="username"></span>
+                    <input type="button" id="btnLogout" value="logout">
+                </div>
+                <div>
+                    <div id="listMessage"></div>
+                    <div id="key">...</div>
+                    <div>
+                        <input type="text" id="txtMessage">
+                        <input type="button" id="btnSend" value="Send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

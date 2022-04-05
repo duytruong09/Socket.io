@@ -1,0 +1,109 @@
+body {
+  border: 0;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #def9fa;
+}
+.container {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}
+.loginForm {
+  padding: 5px 5px 40px 5px;
+  margin: 300px 0 0 0;
+  border: 1px solid gray;
+  border-radius: 30px;
+  text-align: center;
+}
+.chatForm {
+  margin: 50px 0 0 0;
+}
+#txtLogin {
+  width: 40%;
+  padding: 10px;
+  border: 2px solid #f7b386;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+}
+#btnRegister {
+  padding: 10px;
+  border: 1px solid #f7b386;
+  border-radius: 30px;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+#btnRegister:hover {
+  background-color: rgb(240, 162, 18);
+  color: white;
+}
+#right {
+  min-height: 500px;
+}
+#left {
+  min-height: 500px;
+}
+#left {
+  width: 30%;
+  float: left;
+  background-color: rgb(249, 244, 224);
+  border-radius: 30px 0 0 30px;
+}
+#right {
+  width: 70%;
+  float: right;
+  background-color: rgb(249, 244, 224);
+  border-radius: 0 30px 30px 0;
+}
+#boxTitle {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 45px 30px 0 30px;
+  text-align: center;
+}
+#boxContent {
+  margin: 0 30px 30px 30px;
+  border: 1px solid black;
+  border-top: none;
+  padding: 5px;
+  text-align: center;
+}
+#sayHi {
+  text-align: right;
+  margin: 15px 30px 0 0;
+}
+#listMessage {
+  height: 320px;
+  border: 1px solid gray;
+  margin: 20px 20px 25px 20px;
+  padding: 10px 50px 0 10px;
+  text-align: left;
+}
+#txtMessage {
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid #f7b386;
+  border-radius: 30px;
+  width: 50%;
+}
+#btnSend {
+  padding: 5px;
+  border: 1px solid #f7b386;
+  border-radius: 30px;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+#btnSend:hover {
+  background-color: rgb(240, 162, 18);
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+#key {
+  margin: 0 15px 0 30px;
+}
+#username {
+  margin-right: 15px;
+}
