@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000')
+const socket = io('https://chat-realtime-socket-io.herokuapp.com')
 
 socket.on('Server-send-reg-fail', () => {
   alert('Dang ki that bai. \nTen nguoi dung da duoc su dung!!!')

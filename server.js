@@ -70,6 +70,6 @@ io.on('connection', (socket) => {
   })
 })
 
-server.listen(port, () => {
-  console.log(`Server is listining http://localhost:${port}`)
+server.listen(process.env.PORT || 3000, () => {
+  console.log(`Server is listening http://localhost:3000`)
 })
